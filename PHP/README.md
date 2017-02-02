@@ -31,3 +31,26 @@ $example = $value['example'];
 echo $example;
 }
 ```
+
+### DB新規挿入・更新
+新規挿入
+```
+$example = $_POST['example'];
+
+$insert = 'INSERT INTO table (example) VALUES (:example)';
+
+$stmt = $db->prepare($insert);
+$stmt->bindParam(':example', $example);
+$stmt->execute();
+```
+
+更新
+```
+$example = $_POST['example'];
+
+$update = 'UPDATE table SET example = :example';
+
+$prepare = $db->prepare($update);
+$prepare->bindValue(":example",$example);
+$prepare->execute();
+```
