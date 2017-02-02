@@ -57,33 +57,67 @@ $prepare->execute();
 
 ## 細かいこと
 
-### 配列
+### 日時
+今日の日付を定義（Y年m月d日---H時i分s秒）  
+タイムゾーン設定を忘れるとグリニッジ標準時(UTC)となる
 ```
-//新規配列の定義
+date_default_timezone_set('Asia/Tokyo');
+$date = date("Y-m-d");
+```
+
+今日のデータ取得SQL
+```
+$sql = 'SELECT * FROM table WHERE date = DATE(NOW())';
+```
+
+曜日の日本語表示（日=0から土=6）を利用する
+```
+$weekday = array( "日", "月", "火", "水", "木", "金", "土" );
+print '（'.$weekday[date("w")].'）';
+```
+
+### 配列
+
+新規配列の定義
+```
 $data = array();
+```
 
-//変数(id)を配列に追加
+変数(id)を配列に追加
+```
 $data[] = $id;
+```
 
-//配列内の変数をカウント
+配列内の変数をカウント
+```
 $number = count($data);
+```
 
-//配列内の全変数を出力
+配列内の全変数を出力
+```
 print_r($data);
+```
 
-//配列内のn番目の変数を出力
+配列内のn番目の変数を出力
+```
 echo $data[n];
 ```
 
-### input typeと$_POST
+### inputと$_POST
 nameに変数を代入する方法と，valueの値を変数にするには以下を使用する。
-`<input type = "number" name = "example'.$a.'" value="'.$example.'">`
+```<input type = "number" name = "example'.$a.'" value="'.$example.'">```
 
 $_POSTにて定義する際は「'」と「"」に気をつけて使用する。
-`$_POST['example'.$n.'']`
+```$_POST['example'.$n.'']```
 
 ### DB更新後の処理
-DB更新後にリフレッシュされない場合はPHP内でJavaScriptを用いたリフレッシュを行うことで解決する（暫定的な方法で原因は明らかではない）
+DB更新後にリフレッシュされない場合はPHP内でJavaScriptを用いたリフレッシュを行う（暫定的な方法で原因は明らかではない）
 ```
 echo <<<EOM <script type="text/javascript">location.href = "リフレッシュ先のURL";</script> EOM;
+```
+
+### 変数の一部を取得
+dataのa番目からb桁をNewdataとして定義
+```
+$Newdata = substr($data,a,b);
 ```
