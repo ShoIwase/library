@@ -105,10 +105,14 @@ echo $data[n];
 
 ### inputと$_POST
 nameに変数を代入する方法と，valueの値を変数にするには以下を使用する。
-```<input type = "number" name = "example'.$a.'" value="'.$example.'">```
+```
+<input type = "number" name = "example'.$a.'" value="'.$example.'">
+```
 
 $_POSTにて定義する際は「'」と「"」に気をつけて使用する。
-```$_POST['example'.$n.'']```
+```
+$_POST['example'.$n.'']
+```
 
 ### DB更新後の処理
 DB更新後にリフレッシュされない場合はPHP内でJavaScriptを用いたリフレッシュを行う（暫定的な方法で原因は明らかではない）
