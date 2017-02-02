@@ -125,3 +125,7 @@ dataのa番目からb桁をNewdataとして定義
 ```
 $Newdata = substr($data,a,b);
 ```
+
+### セッション
+セッションの使用開始時には必ず`session_start();`を使う。  
+以降の変数は`$_SESSION['example'] = $_POST['manaca'];`のように通常の定義法と同じである。
