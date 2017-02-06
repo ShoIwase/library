@@ -26,3 +26,22 @@ sudo gem install nokogiri
 sudo gem install anemone
 
 ```
+
+### MySQLへの保存
+1.  `https://github.com/chriskite/anemone`からzipをDL展開  
+
+1.  machine直下にanemone-nextを配置  
+
+1.  `cd /vagrant/anemone-next`  
+
+1.  `sudo gem build anemone.gemspec`  
+
+1.  `sudo apt-get install libmysqlclient-dev`  
+
+1.  `sudo gem install mysql2`  
+
+1.  `sudo gem install anemone-0.7.2.gem`  
+
+1.  `ruby mysql.rb`(るびきちp.215)  
+
+1.  エラーでなければ導入完了  
