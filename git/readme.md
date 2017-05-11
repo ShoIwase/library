@@ -16,7 +16,6 @@ branch変更
 git add .
 git commit -m "[コメント]"
 git push https://github.com/[ユーザ名]/[リポジトリ名] [BranchName]
-
 ```
 
 ## Fork元とリモートリポジトリの差分更新
