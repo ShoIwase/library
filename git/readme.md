@@ -6,7 +6,7 @@ clone
 `git clone https://github.com/[ユーザ名]/[リポジトリ名]`
 
 branch作成
-`git branch -b [Branchname]`
+`git checkout -b [Branchname]`
 
 branch変更
 `git checkout [BranchName]`
