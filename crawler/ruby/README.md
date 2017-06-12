@@ -1,6 +1,6 @@
 # すくれいぴんぐについての覚え書き場所
 
-## curl xpath awkを用いたスクレイピング
+## curl・xpath・awkを用いたスクレイピング
 
 ### 準備
 導入しランさせておく  
@@ -17,14 +17,13 @@ awk内は随時更新（正規表現を使用する）
 ## Rubyを用いたスクレイピング
 
 ### nokogiriの導入
-nokogiriをそのまま導入しようとするとエラーが発生するため，以下の通り進める。
+nokogiriをそのまま導入しようとするとエラーが発生するため，以下の通り進める。（書き途中）
 ```
 sudo add-apt-repository -y ppa:brightbox/ruby-ng
 sudo apt-get update
 sudo apt-get -y install ruby2.1 ruby2.1-dev zlib1g-dev
 sudo gem install nokogiri
 sudo gem install anemone
-
 ```
 
 ### MySQLへの保存
