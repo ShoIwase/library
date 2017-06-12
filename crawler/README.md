@@ -1,1 +1,2 @@
-crawlerはruby,Pythonで学んだ。それぞれ覚え書きを書く。
+Ruby・Pythonで学んだ。  
+それぞれ覚え書きを書く。
